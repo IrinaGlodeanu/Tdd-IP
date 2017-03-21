@@ -1,25 +1,23 @@
 public class MathService {
 
-
-    public static boolean isDivisibleByFour(int year) {
+    private boolean isDivisibleByFour(int year) {
         return (year % 4 == 0);
     }
 
-    public static boolean isDivisibleByOneHundred(int year) {
+    private boolean isDivisibleByOneHundred(int year) {
         return (year % 100 == 0);
     }
 
-    public static boolean isDivisibleByFourHundred(int year) {
+    private boolean isDivisibleByFourHundred(int year) {
         return (year % 400 == 0);
     }
 
-    public static boolean isDivisibleByFourButNotByOneHundred(int year) {
+    private boolean isDivisibleByFourButNotByOneHundred(int year) {
         return (isDivisibleByFour(year) && !isDivisibleByOneHundred(year));
     }
 
-    public static boolean isLeapYear(int year) {
+    public boolean isLeapYear(int year) {
         return (isDivisibleByFourButNotByOneHundred(year) || isDivisibleByFourHundred(year));
     }
-
 
 }
